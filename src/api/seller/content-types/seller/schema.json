@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sellers",
+  "info": {
+    "singularName": "seller",
+    "pluralName": "sellers",
+    "displayName": "Seller",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "gst": {
+      "type": "text"
+    },
+    "pan": {
+      "type": "text"
+    },
+    "bppId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "seller": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "order"
+    },
+    "Refund": {
+      "type": "component",
+      "repeatable": true,
+      "component": "refund.refund-action"
+    }
+  }
+}

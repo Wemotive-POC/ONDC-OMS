@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "orderId": {
+      "type": "string"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "bff": {
+      "type": "string"
+    },
+    "collectedBy": {
+      "type": "string"
+    },
+    "paymentType": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "order": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::seller.seller",
+      "inversedBy": "seller"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::settlement-detail.settlement-detail",
+      "mappedBy": "settlement_detail"
+    }
+  }
+}

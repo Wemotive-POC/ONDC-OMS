@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_refund_refund_actions",
+  "info": {
+    "displayName": "Refund Action",
+    "icon": "chartCircle"
+  },
+  "options": {},
+  "attributes": {
+    "amount": {
+      "type": "decimal"
+    }
+  }
+}
